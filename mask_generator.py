@@ -118,7 +118,7 @@ def main():
                 compliant_masks.append(mask)
                 count_valid += 1
 
-        print("generated %s valid masks from %s possible combinations:" % (count_valid, count_total))
+        print("# generated %s valid masks from %s possible combinations:" % (count_valid, count_total))
 
     # print final list, sorted by risk score
     compliant_masks.sort(key=lambda x: x.risk_score)
