@@ -91,7 +91,7 @@ class PasswordMask():
 def main():
     '''main function'''
     length_arg = sys.argv[1]
-    num_hashes = sys.argv[2]
+    num_hashes = int(sys.argv[2])
     lengths = []
     if '-' in length_arg:
         start, end = length_arg.split('-')
