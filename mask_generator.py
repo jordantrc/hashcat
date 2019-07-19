@@ -91,6 +91,7 @@ class PasswordMask():
 def main():
     '''main function'''
     length_arg = sys.argv[1]
+    num_hashes = sys.argv[2]
     lengths = []
     if '-' in length_arg:
         start, end = length_arg.split('-')
@@ -122,7 +123,7 @@ def main():
 
     # print final list, sorted by risk score
     compliant_masks.sort(key=lambda x: x.risk_score)
-    for m in compliant_masks:
+    for m in compliant_masks[:num_hashes]:
         print("%s" % (m.mask_string))
 
 
